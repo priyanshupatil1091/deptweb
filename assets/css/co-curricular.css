@@ -1,10 +1,8 @@
 /* Custom CSS Styling for Co-Curricular Page */
 
 body{
-    margin-top: 4.5rem;
-    border:1px solid red;
+    margin-top: 6.7rem;
 }
-
 
 /* Navigation Bar Styling */
 
@@ -12,7 +10,50 @@ body{
   background: rgba(40, 40, 40, 0.9);
 }
 
+/* Academic Events Section */
 
+.seminar-wrapper{
+    margin-top: 3rem;
+    padding: 0.2rem 5rem;
+    margin-bottom: 3rem;
+}
 
+.seminar-year-heading{
+    margin-bottom: 2.4rem;
+}
 
+.seminar-more-container{
+    margin-top: 1.4rem;
+}
 
+.seminar-more-container a{
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.4rem 1.1rem;
+    background-color: #5b5b5b;
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.6s ease-in-out;
+}
+
+.seminar-more-container a:hover{
+    border: 2px solid #5b5b5b;
+    background-color: white;
+    color: #5b5b5b;
+}
+
+/* Bootstrap Overrides */
+
+img{
+    object-fit: cover;
+    height: 13rem;
+}
+
+.card{
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card:hover{
+    transform: scale(1.025);
+}
