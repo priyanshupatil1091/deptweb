@@ -1,0 +1,51 @@
+/* @media (min-width: 1024px) */
+#hero{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height:fit-content;
+}
+#logo {
+    height: 7rem;
+}
+.card-title{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+#clublogo{
+    margin-left: 40%;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    
+}
+#probody{
+    margin-left: 160px;
+}
+#bodiesimg{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 90px;
+}
+@media only screen and (max-width: 600px) {
+    #logo {
+        height: 4rem;
+    }
+    #clublogo{
+        margin-left: 30%;
+        height: 100px;
+        width: 100px;
+        
+    }
+    #bodiesimg{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 80px;
+    }
+    #probody{
+        margin-left: 0px;
+    }
+    ul {
+        padding-left: 0rem;
+    }
+  }

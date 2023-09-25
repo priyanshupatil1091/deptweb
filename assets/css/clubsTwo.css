@@ -1,0 +1,30 @@
+/* 
+   Don't pollute this file...
+   Only Page specific CSS here..
+*/
+
+img{
+   max-width: 200px !important;
+   height: auto;
+   display: grid;
+   place-items: center;
+}
+
+/* Custom CSS for Club Cards */
+
+.custom-card-wrapper{
+   width: 75% !important;
+   transition: all 0.5s ease-in-out;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+   padding: 1.2rem !important;
+}
+
+.custom-card-wrapper:hover{
+   transform: scale(1.02);
+}
+
+.custom-img-wrapper{
+   display: grid;
+   align-items: center;
+   justify-content: center;
+}

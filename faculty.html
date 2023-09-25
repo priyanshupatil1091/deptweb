@@ -2,36 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Information</title>
+  <style>
+    body,
+    html {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      /* Make sure the body and html elements take up the full height */
+      background-color: #f9f9f9;
+    }
 
-  <title>Department of Computer Engineering</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    /* header {
+      background-color: #2c3e50;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    } */
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    .logo {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 24px;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    .faculty-info-container {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 20px;
+      width: 80%;
+      /* Adjust this value to control the width of the content area */
+    }
 
-  <!-- Template Main CSS File -->
+    .faculty-member {
+      margin-bottom: 20px;
+    }
+
+    .faculty-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .info-section {
+      margin-top: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #faculty-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px;
+      width: 1000px;
+      /* Adjust the container width to fit 5 images per row */
+      margin: auto;
+      /* Center the container */
+    }
+
+    .faculty-member {
+      width: 155px;
+      text-align: center;
+    }
+
+    .faculty-member img {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+
+      bottom: 0;
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <link href="assets/css/style.css" rel="stylesheet">
-
-
 </head>
 
 <body>
-
+  <!-- Boostrap Navigation Bar Lol -->
+  <!-- <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Computer Engineering Department</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="Faculty.html">Faculty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Research.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Workshops & Seminars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://docs.google.com/spreadsheets/d/1QQ7ojtLOtjBjGq1LdFhd5SzWP7wGWvEQ/edit?usp=sharing&ouid=113306277903061576259&rtpof=true&sd=true">Result
+                Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://docs.google.com/spreadsheets/d/1qEdPSOA72x7DH6_HegHbPBh3uegva3LJJueYyfegJ_c/edit?usp=sharing">NBA
+                webpage</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Yearwise BE Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"
+                    href="https://docs.google.com/spreadsheets/d/11t95KrRUeUMIp29B5XCjUZlqvY9zQbrJwewbKQJFsUk/edit?usp=sharing">2020-2021</a>
+                </li>
+                <li><a class="dropdown-item"
+                    href="https://docs.google.com/spreadsheets/d/1bo_X3t46n7HlNYTzPwlYIPtP2Z-_glET8MiC57yXaSY/edit?usp=sharing">2021-2022</a>
+                </li>
+                <li><a class="dropdown-item"
+                    href="https://docs.google.com/spreadsheets/d/1PoYeJcjFu2ZHsbLqDmKD-3SLFQcW67ybMxxQN5oY2Us/edit?usp=sharing">2022-2023</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header> -->
+  
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container-fluid">
@@ -39,6 +171,7 @@
       <div class="row justify-content-center">
         <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
           <h1 class="logo me-auto me-lg-0"><a href="index.html">CompDept</a></h1>
+
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -50,814 +183,185 @@
               <li><a class="nav-link scrollto " href="#portfolio">Infrastructure</a></li>
               <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="#">Faculty</a></li>
+                  <li><a href="faculty.html">Faculty</a></li>
                   <li class="dropdown"><a href="#"><span>Student's Life</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">activities</a></li>
-                      <li><a href="#">achievements</a></li>
-                      <li><a href="#">extra curricular</a></li>
-                      <li><a href="#">alumini</a></li>
-                      <li><a href="#"></a></li>
+                      <li><a href="#">Academics</a></li>
+                      <li><a href="co-curricular.html">Co-Curricular Activities</a></li>
+                      <li><a href="extracurricular.html">Extra-Curricular Activities</a></li>
+                      <li><a href="alumini.html">Our Alumini</a></li>
+                      <li><a href="studentchapters.html">Student Chapters</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Professional Bodies</a></li>
-                  <li><a href="#">Clubs</a></li>
+
+                  <li><a href="clubsTwo.html">Clubs</a></li>
                   <li><a href="#">B.E Projects</a></li>
                 </ul>
               </li>
               <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
+          </nav>
 
-          <a href="#about" class="get-started-btn scrollto">Get Started</a>
+          <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
         </div>
       </div>
 
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-8">
-          <h1>Pillai HOC College of Technology</h1>
-          <h2>Welcome to the Department of Computer Engineering</h2>
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
-        </div>
+  </header>
+  <br>
+  <h1>Meet Our Esteemed Faculty</h1>
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="Jagdish_Bakal_info.html"><img src="Dr.-Jagdish-Bakal-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Dr Jagdish.W.Bakal</p>
+        <p>Computer Engineering Department</p>
+      </div>
+      <div class="col">
+        <a href="Rohini_Bhosale_info.html"><img src="rohini mam(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Rohini Bhosale</p>
+        <p>Computer Engineering Department</p>
+      </div>
+      <div class="col">
+        <a href="Dr. Mansi_Subhedar_info.html"><img src="Dr.-Mansi-Subhedar.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Dr.Mansi Subhedar</p>
+        <p>Computer Engineering Department</p>
+      </div>
+      <div class="col">
+        <a href="Dr.Rajashree_Gadhave.html"><img src="Dr-Rajashree-Tukaram-Gadhave.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Dr.Rajashree Gadhave</p>
+        <p>Computer Engineering Department</p>
+      </div>
+      <div class="col">
+        <a href="abhijeet_More_info.html"><img src="abhijeet-more(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Mr.Abhijeet More</p>
+        <p>Computer Engineering Department</p>
       </div>
     </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About Us</h2>
-          <p>Computer Engineering provides the opportunity to work in the continuously changing technology sector. With the development of faster hardware components, new communication systems and software there is a demand for computer Engineers. Computer Engineering students study the design of digital hardware and software systems. Computer Engineering encompasses a wide range of topics including operating systems, computer architecture, computer networks, robotics, artificial intelligence and computer-aided design. An important area within computer engineering is the development of embedded system devices such as cell phones, digital audio players, digital video recorders, alarm systems, x-ray machines and laser surgical tools which require integration of hardware and embedded software and these are all the result of computer engineering.
-
-            Software engineering companies, telecommunications firms, designers of digital hardware and many other business enterprises hire Computer Engineers right out of college and pay them well..</p>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Program Specific Outcomes (PSOs):
-A graduate in Computer Engineering is expected to:-
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Gather requirements, design and implement software projects using modern tools.</li>
-              <li><i class="ri-check-double-line"></i>Solve real time problems by providing automated solutions in diverse fields of human endeavour.</li>
-              <li><i class="ri-check-double-line"></i>Optimize the use of resources in problem solving and work as a team player.</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
-          </div>
-        </div>
-
+  </div>
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="Mr.Anish_Pillai_info.html"><img src="Mr.-Anish-Pillai-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Mr.Anish Pillai</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Curriculum Development</a></h4>
-              <p>The department develops and updates the curriculum for its academic programs to stay current with advancements in the field. This includes designing courses, selecting textbooks, and integrating new technologies.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Teaching and Instructions</a></h4>
-              <p>Faculty members in the department teach courses, lead labs, conduct tutorials, and assess students' progress through assignments, exams, and projects.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Research and Innovations</a></h4>
-              <p>Faculty members and students collaborate on projects related to computer architecture, embedded systems, digital signal processing, robotics, artificial intelligence, and more.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Community Engagement</a></h4>
-              <p>Computer Engineering department engages with the local community through outreach programs, coding camps, hackathons, and other initiatives to promote computer engineering and STEM education.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Seminars and Workshops</a></h4>
-              <p>The department organizes seminars, workshops, and guest lectures by experts from academia and industry. These events provide students and faculty with exposure to the latest trends and developments in the field.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Student Support</a></h4>
-              <p>Computer Department provide academic advising, career counseling, and support services to students. They also offer resources for job placement and internship opportunities.</p>
-            </div>
-          </div>
-
-        </div>
-
+      <div class="col">
+        <a href="Mr.Rahul_Kapse_info.html"><img src="Mr.-Rahul-Kapse-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Mr.Rahul Kapse</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>Admittance</h3>
-            <p> "Embark on an exciting journey of innovation and discovery with our cutting-edge computer engineering program that equips you with the skills to shape the future of technology.Experience hands-on learning in our state-of-the-art laboratories, where you'll bring your ideas to life and gain practical expertise in designing and building innovative computer systems."</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Fee Structure</a>
-          </div>
-        </div>
-
+      <div class="col">
+        <a href="Ms.Akanksha_Patil_info.html"><img src="Akanksha-Patil(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Akanksha Patil</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Cta Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 order-2 order-lg-1">
-            <div class="icon-box mt-5 mt-lg-0">
-              <i class="bx bx-receipt"></i>
-              <h4>Continuous Learning</h4>
-              <p>As technology evolves, a commitment to lifelong learning might involve alumni resources, webinars, and alumni interaction.</p>
-            </div>
-            <div class="icon-box mt-5">
-              <i class="bx bx-cube-alt"></i>
-              <h4>Career Services</h4>
-              <p>Assistance with resume building, interview preparation, and job placement can help students transition smoothly into the workforce.</p>
-            </div>
-            <div class="icon-box mt-5">
-              <i class="bx bx-images"></i>
-              <h4>Flexible Learning Options</h4>
-              <p>Consider departments that offer online courses, part-time programs, or evening classes to accommodate diverse student needs.</p>
-            </div>
-            <div class="icon-box mt-5">
-              <i class="bx bx-shield"></i>
-              <h4>Networking Oppurtunities</h4>
-              <p>Events that connect students with alumni, professionals, and potential employers can greatly enhance career prospects.</p>
-            </div>
-          </div>
-          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");'></div>
-        </div>
-
+      <div class="col">
+        <a href="Ms.Archana_Augustine_info.html"><img src="Ms.-Archana-Augustine.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Archana Augustine</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container">
-
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-        </div>
-
+      <div class="col">
+        <a href="Ms.Dhanashri_Sakhare_info.html"><img src="Ms.-Dhanashri-Bhopatrao.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Dhanashri Sakhare</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Clients Section -->
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      color: #000;
-      font-family: 'Nunito', sans-serif;
-    }
-
-    .testimonial {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 5rem;
-    }
-
-    h1 {
-      margin: 20px 0;
-    }
-
-    .line {
-      height: 2px;
-      width: 6rem;
-      background-color: #e26c4f;
-      margin-bottom: calc(3rem + 2vmin);
-    }
-
-    .arrow-wrapper {
-      position: relative;
-      width: 70%;
-      border-radius: 2rem;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      overflow: hidden;
-      place-items: center;
-    }
-
-    .review-wrap {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: calc(2rem + 1vmin);
-      width: 100%;
-    }
-
-    #imgBox {
-      border-radius: 50%;
-      width: calc(6rem + 4vmin);
-      height: calc(6rem + 4vmin);
-      position: relative;
-      box-shadow: 5px -3px #e26c4f;
-      background-size: cover;
-      margin-bottom: calc(0.7rem + 0.5vmin);
-    }
-
-    #name {
-      margin-bottom: calc(0.7rem + 0.5vmin);
-      font-size: calc(1rem + 0.5vmin);
-      letter-spacing: calc(0.1rem + 0.1vmin);
-      font-weight: bold;
-    }
-
-    #profession {
-      font-size: calc(0.8rem + 0.3vmin);
-      margin-bottom: calc(0.7rem + 0.5vmin);
-      color: #e26c4f;
-    }
-
-    #description {
-      font-size: calc(0.8rem + 0.3vmin);
-      width: 70%;
-      max-width: 40rem;
-      text-align: center;
-      margin-bottom: calc(1.4rem + 1vmin);
-      color: rgb(92, 92, 92);
-      line-height: 2rem;
-    }
-
-    .arrow {
-      width: calc(1.4rem + 0.6vmin);
-      height: calc(1.4rem + 0.6vmin);
-      border: solid #e26c4f;
-      border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .arrow:hover {
-      transition: 0.3s;
-      transform: scale(1.15);
-    }
-
-    .left-arrow-wrap {
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      transform: rotate(135deg);
-    }
-
-    .right-arrow-wrap {
-      position: absolute;
-      top: 50%;
-      right: 5%;
-      transform: rotate(-45deg);
-    }
-
-    @media screen and (max-width: 900px) {
-      .testimonial {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="testimonial">
-    <h1>Our Reviews</h1>
-    <div class="line"></div>
-    <!-- arrow wrapper contains the review and the arrows -->
-    <div class="arrow-wrapper">
-      <!-- review section -->
-      <div id="reviewWrap" class="review-wrap">
-        <div id="imgBox"></div>
-        <div id="name"></div>
-        <div id="profession"></div>
-        <div id="description"></div>
+    </div>
+  </div>
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="Ms.Dipti_Ketan_Patil_info.html"><img src="Dipti-K-Patil (new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Dipti Ketan Patil</p>
+        <p>Computer Engineering Department</p>
       </div>
-      <!-- left arrow -->
-      <div class="left-arrow-wrap">
-        <div class="arrow"></div>
+      <div class="col">
+        <a href="Ms.Ekta_Ukey_info.html"><img src="Ms.-Ekta-Ukey-1.jpg" alt="Faculty 1" style="border-radius: 50%;"></a>
+        <p>Ms.Ekta Ukey</p>
+        <p>Computer Engineering Department</p>
       </div>
-      <!-- right arrow -->
-      <div class="right-arrow-wrap">
-        <div class="arrow"></div>
+      <div class="col">
+        <a href="Dr.Neha_Shivhare_info.html"><img src="Ms.-Neha-Shivhare-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Dr.Neha Shivhare</p>
+        <p>Computer Engineering Department</p>
+      </div>
+      <div class="col">
+        <a href="Ms.Nikita_Saindane_info.html"><img src="nikita-saindane.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Nikita Saindane</p>
+        <p>Computer Engineering Department</p>
+      </div>
+      <div class="col">
+        <a href="Ms.Pooja_Patil_info.html"><img src="Ms.-Pooja-Patil.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Pooja Patil</p>
+        <p>Computer Engineering Department</p>
       </div>
     </div>
   </div>
 
-  <script>
-    const reviewWrap = document.getElementById("reviewWrap");
-    const leftArrow = document.querySelector(".left-arrow-wrap .arrow");
-    const rightArrow = document.querySelector(".right-arrow-wrap .arrow");
-    const imgBox = document.getElementById("imgBox");
-    const name = document.getElementById("name");
-    const profession = document.getElementById("profession");
-    const description = document.getElementById("description");
-
-    let people = [{
-        photo: 'url("https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_960_720.jpg")',
-        name: "Natalie Grey",
-        profession: "Software Engineer",
-        description: "While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me:"
-      },
-      {
-        photo: "url('https://cdn.pixabay.com/photo/2018/06/27/07/45/college-student-3500990_960_720.jpg')",
-        name: "Dylan Smith",
-        profession: "Student",
-        description: "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed. Bitters hashtag tumeric sriracha hot chicken gentrify portland. Dreamcatcher neutra irony."
-      },
-      {
-        photo: "url('https://cdn.pixabay.com/photo/2015/01/08/18/30/man-593372__340.jpg')",
-        name: "Branson Cook",
-        profession: "Web Developer",
-        description: "Hello, I'm a web developer. I have been working as a web developer for 5 years. I have worked in many companies and I have worked as a freelancer. I have worked in a team and I have worked alone. I have worked in a big company and I have worked in a small one."
-      },
-      {
-        photo: "url('https://cdn.pixabay.com/photo/2012/10/26/02/12/actor-63082_960_720.jpg')",
-        name: "Julius Grohn",
-        profession: "Designer",
-        description: "Working as a designer is a very interesting job. You can work in a team or alone, you can work in a company or as a freelancer. You can work in an office or at home. You can work in a big company or in a small one. You can work in a big city or in a small town."
-      }
-    ];
-
-    // set the first person
-    imgBox.style.backgroundImage = people[0].photo;
-    name.innerText = people[0].name;
-    profession.innerText = people[0].profession;
-    description.innerText = people[0].description;
-    let currentPerson = 0;
-
-    //Select the side where you want to slide
-    function slide(side, personNumber) {
-      let reviewWrapWidth = reviewWrap.offsetWidth + "px";
-      let descriptionHeight = description.offsetHeight + "px";
-      //(+ or -)
-      let side1symbol = side === "left" ? "" : "-";
-      let side2symbol = side === "left" ? "-" : "";
-
-      setTimeout(() => {
-        imgBox.style.backgroundImage = people[personNumber].photo;
-      }, 0);
-      setTimeout(() => {
-        description.style.height = descriptionHeight;
-      }, 100);
-      setTimeout(() => {
-        name.innerText = people[personNumber].name;
-      }, 200);
-      setTimeout(() => {
-        profession.innerText = people[personNumber].profession;
-      }, 300);
-      setTimeout(() => {
-        description.innerText = people[personNumber].description;
-      }, 400);
-    }
-
-    function setNextCardLeft() {
-      if (currentPerson === 3) {
-        currentPerson = 0;
-        slide("left", currentPerson);
-      } else {
-        currentPerson++;
-      }
-
-      slide("left", currentPerson);
-    }
-
-    function setNextCardRight() {
-      if (currentPerson === 0) {
-        currentPerson = 3;
-        slide("right", currentPerson);
-      } else {
-        currentPerson--;
-      }
-
-      slide("right", currentPerson);
-    }
-
-    leftArrow.addEventListener("click", setNextCardLeft);
-    rightArrow.addEventListener("click", setNextCardRight);
-  </script>
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container">
-
-        <div class="text-center title">
-          <h3>What we have achieved so far</h3>
-          <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
-        </div>
-
-        <div class="row counters position-relative">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-
-        </div>
-
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="Ms.Snehal_Chitale_info.html"><img src="Ms.-Snehal-Chitale.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Snehal Chitale</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Infrastructure</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
+      <div class="col">
+        <a href="Ms.Snehal_Shinde_info.html"><img src="Ms.-Snehal-Shinde(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Snehal Shinde</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Portfolio Section -->
-
-   
-
-    <!-- ======= Faq Section ======= -->
-    <section id="faq" class="faq">
-      <div class="container-fluid">
-
-        <div class="row">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="content">
-              <h3>Frequently Asked <strong>Questions</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-            </div>
-
-            <div class="accordion-list">
-              <ul>
-                <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Are there opportunities for hands-on projects and practical learning?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                    <p>
-                      Yes, our curriculum emphasizes hands-on learning. Students work on projects, labs, and assignments that provide practical experience in designing and implementing computer systems.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">What academic programs does the Computer Engineering department offer? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Our department offers Bachelor's and Master's degree programs in Computer Engineering, providing comprehensive education in hardware, software, and systems.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Can students choose elective courses? What are some popular electives?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Yes, students can choose elective courses based on their interests. Popular electives include Machine Learning, Digital Signal Processing, Mobile App Development, and VLSI Design
-                    </p>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/pexels-pixabay-221164.jpg");'>&nbsp;</div>
-        </div>
-
+      <div class="col">
+        <a href="Mr.Sagar_Yeshwantrao_info.html"><img src="sagar-yeshwantrao.png" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Mr.Sagar Yeshwantrao</p>
+        <p>Computer Engineering Department</p>
       </div>
-    </section><!-- End Faq Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+      <div class="col">
+        <a href="Ms.Shrutika_Khobragade_info.html"><img src="Ms.-Shrutika-Khobragade(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Shrutika Khobragade</p>
+        <p>Computer Engineering Department</p>
       </div>
-
-      <div>
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15099.366393493894!2d73.1768422!3d18.8941071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e6af4a9b7a47%3A0x30dbd3b0d3c14416!2sPillai%20HOC%20College%20Of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1692723675690!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+      <div class="col">
+        <a href="Ms.Srijita_Bhattarcharjee_info.html"><img src="Srijita-Bhattacharjee.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Shrijita Bhattacharjee</p>
+        <p>Computer Engineering Department</p>
       </div>
-
-      <div class="container">
-        
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="ri-map-pin-line"></i>
-                <h4>Location:</h4>
-                <p>Dist. Raigad, Via Panvel (Navi-Mumbai), Rasayani, Tal. Khalapur 410207, MH, India</p>
-              </div>
-
-              <div class="email">
-                <i class="ri-mail-line"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="ri-phone-line"></i>
-                <h4>Call:</h4>
-                <p>3546841213685</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Department of Computer Engineering</h3>
-      <p>For the Students, By the Students</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>CompDept</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        
-        Designed by Pratish & Dhruv
-        Developed by Priyanshu & Sahil
-        Using Bootstrap & bootstrapmade 
+      <div class="col">
+        <a href="Ms.Suchita_Walke_info.html"><img src="suchita-santosh-walke.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p>Ms.Suchita Walke</p>
+        <p>Computer Engineering Department</p>
       </div>
     </div>
-  </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  </div>
+  <footer>
+    © 2023 College Name | Address | Contact: (123) 456-7890
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

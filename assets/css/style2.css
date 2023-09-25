@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url(https://db.onlinewebfonts.com/c/6e2da64b88f7e60cda1df63cb63cc8f2?family=Canela+Deck+Bold);
 
 /*--------------------------------------------------------------
 # General
@@ -421,7 +421,7 @@ body {
   #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg.jpg") top center;
+    background: url("/assets/img/Creative\ Watercolor\ Youth\ Dream\ Background\,\ Watercolor\,\ Youth\,\ Dreams\ Background\ Image\ And\ Wallpaper\ for\ Free\ Download.jfif") top center;
     background-size: cover;
     position: relative;
   }

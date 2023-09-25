@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty Information</title>
+<style>
+  
+  body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make sure the body and html elements take up the full height */
+    background-color: #f9f9f9;
+ 
+  }
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  header {
+    background-color: #2c3e50;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .logo {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .faculty-info-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%; /* Adjust this value to control the width of the content area */
+  }
+  .faculty-member {
+    margin-bottom: 20px;
+  }
+  .faculty-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  .info-section {
+    margin-top: 10px;
+  }
+  footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+  }
+</style>
+
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Bootstrap Navigation Bar Lol -->
+  <!-- <header><nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Computer Engineering Department</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        <li class="nav-item">
+                  <a class="nav-link " href="Faculty.html">Faculty</a>
+                </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Workshops & Seminars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1QQ7ojtLOtjBjGq1LdFhd5SzWP7wGWvEQ/edit?usp=sharing&ouid=113306277903061576259&rtpof=true&sd=true">Result Analysis</a>
+                    </li>
+          <li class="nav-item">
+             <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1qEdPSOA72x7DH6_HegHbPBh3uegva3LJJueYyfegJ_c/edit?usp=sharing">NBA webpage</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Yearwise BE Projects
+            </a>
+                      <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/11t95KrRUeUMIp29B5XCjUZlqvY9zQbrJwewbKQJFsUk/edit?usp=sharing">2020-2021</a></li>
+              <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1bo_X3t46n7HlNYTzPwlYIPtP2Z-_glET8MiC57yXaSY/edit?usp=sharing">2021-2022</a></li>
+              <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1PoYeJcjFu2ZHsbLqDmKD-3SLFQcW67ybMxxQN5oY2Us/edit?usp=sharing">2022-2023</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav></header> -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+      <div class="container-fluid">
+  
+        <div class="row justify-content-center">
+          <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">CompDept</a></h1>
+  
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  
+            <nav id="navbar" class="navbar order-last order-lg-0">
+              <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto " href="#portfolio">Infrastructure</a></li>
+                <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li class="dropdown"><a href="#"><span>Student's Life</span> <i class="bi bi-chevron-right"></i></a>
+                      <ul>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="co-curricular.html">Co-Curricular Activities</a></li>
+                        <li><a href="extracurricular.html">Extra-Curricular Activities</a></li>
+                        <li><a href="alumini.html">Our Alumini</a></li>
+                        <li><a href="studentchapters.html">Student Chapters</a></li>
+                      </ul>
+                    </li>
+                   
+                    <li><a href="clubsTwo.html">Clubs</a></li>
+                    <li><a href="#">B.E Projects</a></li>
+                  </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+  
+            <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+          </div>
+        </div>
+  
+      </div>
+    </header>
+  <br>  
+<br>
+<img src="universsity students.webp" class="img-fluid" alt="universsity students">
+<div class="container">
+<div>
+<h1>Research</h1>
+</div>
+<br>
+<div>
+<figure class="text-center">
+<p><em><strong>Pillai Hoc College of Engineering and Technology takes immense pride in the academic accomplishments of its dedicated teaching faculty. Our esteemed teachers are not just educators but also prolific contributors to the field of education and research. Their commitment to fostering knowledge is evident through their regular publications in reputable journals, conference proceedings, and books.</strong></em></p>
+</figure>
+</div>
+</div>
+<br>
+<div class="row">
+    <div class="col-4" style=" position: sticky;bottom: 12rem; align-self: flex-end;">
+        <div class="list-group" style="text-align: center;">
+        <a class="list-group-item list-group-item-action" href="#list-item-1">2015</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-2">2016</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-3">2017</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-4">2018</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-5">2019</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-6">2020</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-7">2021</a>
+        </div>
+    </div>
+    <div class="col-8" style = "padding: 5%;">
+      
+        <h4 id="list-item-1">2015</h4>
+        <p><b>1.</b>  Mrs. Reena Chaudhari, Dr. J.W.Bakal, “Novel Architecture for Database Forensic Analysis Using Metadata” International Journal of Advance Research in Science Engineering (IJARSE), Volume No. 4, Special Issue (1), Sept 2015. ISSN 2319-8354.
+        <br>
+        <br>
+            2.Arpana Akash Morey, Dr. Jagdish W. Bakal, “A Secure Approach to Prevent Packet Dropping and Message Tampering Attacks on AODV-based MANETs”, International Journal of Engineering Trends and Technology (IJETT), Volume-24 Number-2, 2015
+         <br>
+         <br>   
+            3.Mrs. Reena Chaudhari, Dr J.W.Bakal, “Overview on Database Forensic Analysis” International Journal of Advance Foundation and Research In Science & Engineering (IJAFRSE) Volume 1, Special Issue, Vivruti 2015. Impact Factor: 1.036.
+        <br>  
+        <br>
+            4."A 0.25um SVCL Based 4T DRAM Design for Minimizing Leakage Current Using CMOS Technology", ICGCIoT 2015, IEEE, ISBN: 978-1-4673-7909-0 (http://ieeexplore.ieee.org/document/7380463/)
+        <br>
+        <br>
+            5.Rahul Kapse, Reshma Talar, "Review of Software Fault Prediction Using Data Mining Techniques" Research Forum Seminar, at Pillai HOC College of Engineering & Technology, Rasayani, Volume: 2, March 2015
+        <br>
+        <br>
+            6.Rekha More, Ekta Ukey "Opinion mining of Review: Distributed over E-Commerce Sites", International Journal of Computer Science Engineering and Information Technology Research, ISSN(P): 2249-6831, ISSN(O): 2249-7943, April 2015
+        <br>
+        <br>
+            7.Published a Paper in IJAECS (International Journal of Advances in Electronics and Computer Science) titled "A Novel Dynamic Personalized Recommendation Technique for Sparse Data" in July 2015
+        <br>
+        <br>
+            8.Presented a Paper in NCRISET (National Conference on Recent Innovations in Science Engineering and Technology) titled "A Novel Dynamic Personalized Recommendation Technique for Sparse Data" at Pune in April 2015
+        <br>
+        </p>
+        <h4 id="list-item-2">2016</h4>
+        <p><br>
+            1.Mansi Subhedar and Vijay Mankar, "Image Steganography using Redundant Discrete Wavelet Transform and QR Factorization", Elsevier International Journal Computers & Electrical Engineering, Vol. 54, 406 - 422, 2016
+            <br>
+            <br>
+            2."Capacitive Coupled Truncated Corner MSA", Book Name: Innovation in Computational Intelligence, Chapter No. 15, DOI: 10.1007/978-981-10-4555-4_15, (SCI, Volume 713), pp. 227-237, Springer REDSET - 2016 (https://link.springer.com/chapter/10.1007/978-981-10-4555-4_15)
+            <br>
+        <br>
+            3.Published a Paper in IJERT (International Journal of Engineering Research & Technology) titled "A Novel Approach for Customized Recommendation on Infrequent Content" in January 2016
+            <br>
+        <br>
+            4.Presented paper in International Conference on Emerging Trends in Applied Engineering and Technology, ICERAT, KGCE- Karjat titled,”Spoofing Attack Detection and Localizing Multiple Adversaries in Wireless Network”, in April 2016
+            <br>
+        <br>
+            5.Published paper in Int. Scientific Journal IJRITCC, Volume 4, issue 4, April 2016. with title “Classification of Secured Encrypted Relational Data over Cloud by Using SVM”
+            <br>
+        <br>
+            6.Published paper in Int. Scientific Journal IJRITCC, Volume 4, issue 4, April 2016. with title “Classification of Secured Encrypted Relational Data over Cloud by Using SVM”
+            <br>
+        <br>
+            7.“An Overview of Network Security Tools: IDS, Honeypot & Firewall” in “Vivruti” International Conference held by DILKAP Institute of Engineering in 2016
+            </p>
+        <h4 id="list-item-3">2017 </h4>
+        <p><br>
+            <br>
+            1.Shilpa G. Kolte and Dr. J. W. Bakal, “Big Data Summarization Using Novel Clustering Algorithm and Semantic Feature Approach”, International Journal of Rough Sets and Data Analysis (IJRSDA), Volume 4, Issue 3, July-September 2017.DOI: 10.4018/IJRSDA.2017070108
+            <br>
+            <br>
+            2.B. N. Jagdale, J. W. Bakal, “Expressing & Restraining Personalized Location Privacy in Mobile Applications”, International Journal on Advances in Wireless and Mobile Communications, ISSN 0973-6972, UGC 1530, Volume 10, Number 4, pp. 559-575, 2017.
+            <br>
+            <br>
+            3.B. N. Jagdale, J. W. Bakal, “Persistency and Broadcast based Message Exchange Protocol”,International 
+            <br>
+            <br>
+            4.Khushbu Jakhotia, Rohini Bhosale and Dr. Chelpa Lingam, "Novel Architecture for Enabling Proof of Retrievability using AES Algorithm" International Conference on Computing Methodologies and Communication (ICCMC), (2017)
+            <br>
+            <br>
+            5.Mansi Subhedar and Vijay Mankar, "Curvelet Transform and Cover Selection for Secure Steganography", Springer International Journal of Multimedia Tools and Applications, pp. 1-24, 2017
+            <br>
+            <br>
+            6."An Efficient Data Integrity Using Two TPA's with in cloud Data Storage", ICECDS2017, Aug 2017, IEEE, ISBN: 978-1-5386-5117
+            <br>
+            <br>
+            7."Integration Between Wireless Sensor and Cloud”, International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) organised on 10th February 2017 by SCAD Institute of Technology at Coimbatore, India (http://ieeexplore.ieee.org/document/8058285/)
+            <br>
+            <br>
+            8.Judge for Technical paper publication conducted under event “TECHNOMANIA” at Bharti Vidyapeeth College of Engineering, Kharghar on 10th March, 2017
+            <br>
+            <br>
+            9.Tanmayi Nagale & Rahul Kapse, "Enrichment of Time Efficiency for MapReduce Workloads through Job Ordering" Imperial Journal of Interdisciplinary Research (IJIR) Vol-3, Issue-5, 2017 ISSN: 2454-1362
+            <br>
+            <br>
+            10.Ekta Ukey, Sarita Patil "Adaptive Rule Based Multiclass SVM Classification of Big Biological Data", International Journal of Development Research Vol. 07, Issue 03, pp. 11920-11923, March, 2017 (http://www.journalijdr.com/sites/default/files/issue-pdf/8257.pdf)
+            <br>
+            <br>
+            11.Ekta Ukey, Sana Khan "Secure Distributed Big Data Storage Using Cloud Computing", IOSR Journal of Computer Engineering (IOSR-JCE) e-ISSN: 2278-0661, p-ISSN: 2278-8727, Volume 19, Issue 4, Ver. V. (July - August 2017), PP 08-12 (http://www.iosrjournals.org/iosr-jce/papers/Vol19-issue4/Version-5/B1904050812.pdf)
+            <br>
+            <br>
+            12.Sweety Shinde, Ekta Ukey "C4 Traige with feature selection using Kruskal Algorithm", International Conference on Recent Advances in Computer Science and Information Technology (ICRACSIT) 5th March, 2017
+            <br>
+            <br>
+            13.Darshana Wajekar, Ekta Ukey "An Improved Algorithm for Mining Frequent Itemsets" International Conference on Research Trends in Engineering, Applied Science and Management, Vol. 7, Issue. 3, ISSN : 2347-8616, May 2017
+            <br>
+            <br>
+            14.International Journal of Computer Engineering and Applications (IJCEA), May, 2017, Paper Title: “Replication Management in HDFS”, Volume-XI ISSN: 2321-3469.
+            <br>
+            <br>
+            15.“Prediction based on Trigulation in Common Ad-hoc Wireless Sensor Network” International Journal of Tread in Research & Development in March-April 2017
+            <br>
+            <br>
+            16.“Prediction based on Trigulation in Ad-hoc Wireless Network” in International Journal of Science & Innovative Engineering & Technology in May 2017
+        </p>
+        <h4 id="list-item-4">2018</h4>
+        <p><br>
+            <br>
+            1.Snehal Patil and Mansi Subhedar, "Optimizing MPLS Tunnel Creation Performance by Using SDN", International Conference on Soft Computing and Signal Processing, Malla Reddy College of Engineering and Technology Hyderabad, 22nd - 23rd June 2018
+            <br>
+            <br>
+            2.Ganesh Yadav, Rajkumar Gupta, Rajashree Gadhave “A smart phone based bus tracking system”, International Journal of Creative Research Thoughts (IJCRT), ISSN:2320-2882, Volume.6, Issue 2, Page No pp.1031-1036, April 2018, Available at http://www.ijcrt.org/IJCRT1812145.pdf
+            <br>
+            <br>
+            3.Chandrashekhar Bobade, Akash Warwate, Rajashree Gadhave “Crowd Sourcing for Collaborative Communities” National Level Technical Paper presentation, Terna College of Engineering, Nerul, March 2018
+            <br>
+            <br>
+            4.Jayprakash Chourasiya, Kadir Abdul, Rajashree Gadhave “Effective bug data reduction technique instance selection and Feature Selection” International Journal of Creative Research Thoughts (IJCRT) ISSN:2320-2882, Volume.6, Issue 1, Page No pp.915-920, March 2018, Available at : http://www.ijcrt.org/IJCRT1803228.pdf
+            <br>
+            <br>
+
+            5.Mukt Shabd Journal “Software Testing Techniques and Automation Tools” May 2020 Fourth International Conference on Computing” Privacy-Preserving Outsourced Mining of D-Éclat Association Rules on Vertically Partitioned Databases” 10.1109/ICCUBEA.2018.8697353
+            <br>
+            <br>
+            6.“Prediction based on Trigulation in Wireless Sensor Node” in International Journal of Management Technology & Engineering in June 2018
+        </p>
+        <h4 id="list-item-5">2019</h4>
+        <p><br>
+            <br>
+            1.Rohini Bhosale and Dr. Madhumita Chattejee " Privacy-Preserving Profile Matching in Mobile Social Networks: A Comprehensive Survey" Seventh International Symposium on Security in Computing and Communications (SSCC'19) Computer and Information Science Book Series by Springer, 18th - 21st December, 2019
+            <br>
+            <br>
+            2.Mansi Subhedar and Vijay Mankar, "Image Steganography using Contourlet Transform and Matrix Decomposition Techniques", Springer Multimedia Tools and Applications, Volume 78, Issue 15, pp 22155–22181, August 2019
+            <br>
+        <br>
+            3.Mansi Subhedar and Vijay Mankar, "Secure Image Steganography Using Framelet Transform and Bidiagonal SVD", Springer Multimedia Tools and Applications, 12th November 2019
+            <br>
+        <br>
+            4.Rajashree Gadhave, “Classification Analysis on Hyperspectral imagery data” JCR, August 2019, Vol 6, Issue 4, 2019, ISSN- 2394-5125
+            <br>
+        <br>
+            5.Akshay Jain, Rajashree Gadhave “ Automatic Brain Tumor detection on T1- weighted MR image using K-mean clustering and HCSD” IC-ISCN 2019
+            <br>
+        <br>
+            6.Published paper in IRJET (International Research Journal of Engineering and Technology) titled “GSM Based Home Automation”, in April, 2019</p>
+        <h4 id="list-item-6">2020</h4>
+        <p>
+            1.Uttaran Roychowdhury and Mansi Subhedar, “Covid-19 Detection Using CNN and Decision Tree” International e-Conference on Intelligent Systems and Signal Processing (e-ISSP 2020), Springer's Advances in Intelligent Systems and Computing (AISC) series during 28th - 30th December, 2020
+            <br>
+            <br>
+            2.Rajashree Gadhave, R. R. Sedamkar “Statistical perspective on Hyper Spectral Classification System for Accuracy Improvement”, Scopus, IJEAT, February 2020, Volume-9, Issue- 3, ISSN: 2249-8958 http://www.ijeat.org/download/volume-9-issue-3/
+            <br>
+            <br>
+            3.Snehal Sarode, Sarika Jadhao, Bhavna Shinde, Rajashree Gadhave, “Classification of Hyperspectral Imagery Data using Capsule Cap Network”, International Journal of Scientific & Engineering Research, Volume 11, Issue 3, March-2020, ISSN 2229-551
+            <br>
+            <br>
+            4.Anish Sawant, Yash Shah, Rajashree Gadhave, “A Locomotive Voice-Based Assistant using Raspberry Pi”, International Research Journal of Engineering and Technology, Volume: 07 Issue: 03, March 2020 -ISSN: 2395-0056 https://www.irjet.net/archives/V7/i3/IRJET-V7I3834.pdf
+            <br>
+            <br>
+            5.International Journal of Mechanical and Production Engineering Research and Development (IJMPERD) “A Survey on Various Communication Applications” Volume 10, Issue 3,June 2020
+            <br>
+            <br>
+            6.International Research Journal of Engine and technology “Water Quality Monitoring System based On Sensors and online updates”, Volume 7, Issue 5, May 2020
+            <br>
+            <br>
+            7.International Research Journal of Engineering and Technology (IRJET)”Facial Expression Detection using PCA” 2020 e-ISSN: 2395-0056
+            <br>
+            <br>
+            8.Iconic Research And Engineering Journals, Jun 2020”Artificial Intelligence Based Industrial Product Maintenance Using IoT” IRE Journals Volume 3 Issue 12 ISSN: 2456-8880
+            <br>
+            <br>
+            9.Mukt Shabd Journal “Software Testing Techniques and Automation Tools” May 2020 Fourth International Conference on Computing” Privacy-Preserving Outsourced Mining of D-Éclat Association Rules on Vertically Partitioned Databases” 10.1109/ICCUBEA.2018.8697353
+            <br>
+            <br>
+            10.Development of Marathi Speech Based System for Human Robot Interaction was published in International Journal of Scientific Research in Engineering and Management (IJSREM) Volume 04, Issue 03, March 2020
+            <br>
+            <br>
+            11.“Overview of Hole Punching: ICMP Hole Punching, TCP Hole Punching, UDP Hole Punching” in International Research Journal of Engineering & Technology (IRJET) in April 2020
+        </p>
+        <h4 id="list-item-7">2021</h4>
+        <p><br>
+            <br>
+            1.Subhedar, M.S. Cover selection technique for secure transform domain image steganography. Iran J Comput Sci (2021). https://doi.org/10.1007/s42044-020-00077-9
+            <br>
+            <br>
+            2.Rajashree Gadhave, R. R. Sedamkar “Automated Classification of Hy-perspectral Imageusing Supervised Machine Learning Approach”, Springer, ICAAAIML-2021, Noida. https://doi.org/10.1007/978-981-19-4831-2_63
+            <br>
+        <br>
+            3.The Evolution of Cloud Computing, Journal of Network Security, ISSN: 2395-6739 (Online)ISSN: 2321-8517 (Print),Volume 9, Issue 1, 2021, DOI (Journal): 10.37591/JoNS
+            <br>
+        <br>
+            4.Published paper in IRJET (International Research Journal of Engineering and Technology) titled “Social Distancing Violation Alert System”, in April, 2021
+            <br>
+        <br>
+            5.Published paper in IRJET (International Research Journal of Engineering and Technology) titled “Air Monitoring System using IoT”, in April, 2021
+            <br>
+        <br>
+            6.Published paper in IRJET (International Research Journal of Engineering and Technology) titled “Predicting Presence of Heart Disease using Machine Learning”, in April, 2021
+            <br>
+        <br>
+            7.Published paper in IRJET (International Research Journal of Engineering and Technology) titled “Movie Opinion Mining & Emotions Rating Software”, in April, 2021
+            <br>
+        <br>
+            8.Published paper in IRJET (International Research Journal of Engineering and Technology) titled “Automated Exam Cell System”, in April, 2021
+            <br>
+        <br>
+            9.Published Paper in (International Journal of Research and Analytical Reviews) titled ”Discovering Inference Attack on The Social Media Through Fusion of Hyper Graph and Machine Learning, E-ISSN 2348-1269, P- ISSN 2349-5138, Volume.8, Issue 1, Page No pp.353-361, February 2021</p>
+      </div>
+    </div>
+  </div>
+<br>
+<footer>
+
+  © 2023 College Name | Address | Contact: (123) 456-7890
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script  src="script.js"></script>
+</body>
+</html>
