@@ -1,0 +1,22 @@
+/* Custom Styling For Research Page */
+
+#header{
+    background: rgba(40, 40, 40, 0.9);
+}
+
+body{
+    margin-top: 4.5rem;
+}
+
+.head-info{
+    font-size: 1.1rem;
+}
+
+.info{
+    padding-block: 1rem !important;
+    padding-inline: 1.5rem;
+}
+
+h4{
+    margin-top: 2rem;
+}

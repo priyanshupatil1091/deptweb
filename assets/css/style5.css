@@ -626,6 +626,7 @@ section {
     border-radius: 6px;
     margin-top: 1.5rem;
     overflow-x: hidden;
+    width:90%;
 }
 
 .news-container .title {

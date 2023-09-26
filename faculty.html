@@ -2,178 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faculty Information</title>
-  <style>
-    body,
-    html {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      /* Make sure the body and html elements take up the full height */
-      background-color: #f9f9f9;
-    }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    .page-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
+  <title>Department of Computer Engineering</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    /* header {
-      background-color: #2c3e50;
-      padding: 20px;
-      width: 100%;
-      text-align: center;
-    } */
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    .logo {
-      color: #ecf0f1;
-      text-decoration: none;
-      font-size: 24px;
-    }
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    .faculty-info-container {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 10px;
-      margin-top: 20px;
-      width: 80%;
-      /* Adjust this value to control the width of the content area */
-    }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    .faculty-member {
-      margin-bottom: 20px;
-    }
-
-    .faculty-member img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      margin-bottom: 10px;
-    }
-
-    .info-section {
-      margin-top: 10px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    #faculty-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 30px;
-      width: 1000px;
-      /* Adjust the container width to fit 5 images per row */
-      margin: auto;
-      /* Center the container */
-    }
-
-    .faculty-member {
-      width: 155px;
-      text-align: center;
-    }
-
-    .faculty-member img {
-      border-radius: 50%;
-      width: 140px;
-      height: 140px;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: #ecf0f1;
-      text-align: center;
-      padding: 20px;
-      width: 100%;
-
-      bottom: 0;
-    }
-  </style>
-
+  <!-- Template Main CSS File -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <link href="assets/css/style.css" rel="stylesheet">
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style5.css">
+  <link href="assets/css/faculty.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Boostrap Navigation Bar Lol -->
-  <!-- <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Computer Engineering Department</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="Faculty.html">Faculty</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Research.html">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Workshops & Seminars</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                href="https://docs.google.com/spreadsheets/d/1QQ7ojtLOtjBjGq1LdFhd5SzWP7wGWvEQ/edit?usp=sharing&ouid=113306277903061576259&rtpof=true&sd=true">Result
-                Analysis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                href="https://docs.google.com/spreadsheets/d/1qEdPSOA72x7DH6_HegHbPBh3uegva3LJJueYyfegJ_c/edit?usp=sharing">NBA
-                webpage</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Yearwise BE Projects
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item"
-                    href="https://docs.google.com/spreadsheets/d/11t95KrRUeUMIp29B5XCjUZlqvY9zQbrJwewbKQJFsUk/edit?usp=sharing">2020-2021</a>
-                </li>
-                <li><a class="dropdown-item"
-                    href="https://docs.google.com/spreadsheets/d/1bo_X3t46n7HlNYTzPwlYIPtP2Z-_glET8MiC57yXaSY/edit?usp=sharing">2021-2022</a>
-                </li>
-                <li><a class="dropdown-item"
-                    href="https://docs.google.com/spreadsheets/d/1PoYeJcjFu2ZHsbLqDmKD-3SLFQcW67ybMxxQN5oY2Us/edit?usp=sharing">2022-2023</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header> -->
-  
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container-fluid">
 
       <div class="row justify-content-center">
         <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
           <h1 class="logo me-auto me-lg-0"><a href="index.html">CompDept</a></h1>
-
           <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/faculty/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
           <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
@@ -183,185 +53,247 @@
               <li><a class="nav-link scrollto " href="#portfolio">Infrastructure</a></li>
               <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="faculty.html">Faculty</a></li>
+                  <li><a href="#">Faculty</a></li>
                   <li class="dropdown"><a href="#"><span>Student's Life</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
-                      <li><a href="#">Academics</a></li>
-                      <li><a href="co-curricular.html">Co-Curricular Activities</a></li>
-                      <li><a href="extracurricular.html">Extra-Curricular Activities</a></li>
-                      <li><a href="alumini.html">Our Alumini</a></li>
-                      <li><a href="studentchapters.html">Student Chapters</a></li>
+                      <li><a href="#">activities</a></li>
+                      <li><a href="#">achievements</a></li>
+                      <li><a href="#">extra curricular</a></li>
+                      <li><a href="#">alumini</a></li>
+                      <li><a href="#"></a></li>
                     </ul>
                   </li>
-
-                  <li><a href="clubsTwo.html">Clubs</a></li>
+                  <li><a href="#">Professional Bodies</a></li>
+                  <li><a href="#">Clubs</a></li>
                   <li><a href="#">B.E Projects</a></li>
                 </ul>
               </li>
               <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav>
+          </nav><!-- .navbar -->
 
-          <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+          <a href="#about" class="get-started-btn scrollto">Get Started</a>
         </div>
       </div>
 
     </div>
-  </header>
-  <br>
-  <h1>Meet Our Esteemed Faculty</h1>
-  <br>
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <a href="Jagdish_Bakal_info.html"><img src="Dr.-Jagdish-Bakal-1.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Dr Jagdish.W.Bakal</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Rohini_Bhosale_info.html"><img src="rohini mam(new).jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Rohini Bhosale</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Dr. Mansi_Subhedar_info.html"><img src="Dr.-Mansi-Subhedar.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Dr.Mansi Subhedar</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Dr.Rajashree_Gadhave.html"><img src="Dr-Rajashree-Tukaram-Gadhave.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Dr.Rajashree Gadhave</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="abhijeet_More_info.html"><img src="abhijeet-more(new).jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Mr.Abhijeet More</p>
-        <p>Computer Engineering Department</p>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <a href="Mr.Anish_Pillai_info.html"><img src="Mr.-Anish-Pillai-1.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Mr.Anish Pillai</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Mr.Rahul_Kapse_info.html"><img src="Mr.-Rahul-Kapse-1.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Mr.Rahul Kapse</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Akanksha_Patil_info.html"><img src="Akanksha-Patil(new).jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Akanksha Patil</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Archana_Augustine_info.html"><img src="Ms.-Archana-Augustine.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Archana Augustine</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Dhanashri_Sakhare_info.html"><img src="Ms.-Dhanashri-Bhopatrao.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Dhanashri Sakhare</p>
-        <p>Computer Engineering Department</p>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <a href="Ms.Dipti_Ketan_Patil_info.html"><img src="Dipti-K-Patil (new).jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Dipti Ketan Patil</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Ekta_Ukey_info.html"><img src="Ms.-Ekta-Ukey-1.jpg" alt="Faculty 1" style="border-radius: 50%;"></a>
-        <p>Ms.Ekta Ukey</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Dr.Neha_Shivhare_info.html"><img src="Ms.-Neha-Shivhare-1.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Dr.Neha Shivhare</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Nikita_Saindane_info.html"><img src="nikita-saindane.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Nikita Saindane</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Pooja_Patil_info.html"><img src="Ms.-Pooja-Patil.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Pooja Patil</p>
-        <p>Computer Engineering Department</p>
-      </div>
-    </div>
-  </div>
+  </header><!-- End Header -->
 
+  <div class="hero-section" align="center">
+    <h1>Meet Our Esteemed Faculty</h1>
+  </div>
+  
+  <br>
+  <br>
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <a href="Ms.Snehal_Chitale_info.html"><img src="Ms.-Snehal-Chitale.jpg" alt="Faculty 1"
+        <a href="faculty_info/Jagdish_Bakal_info.html"><img src="assets/img/faculty/Dr.-Jagdish-Bakal-1.jpg" alt="Faculty 1"
             style="border-radius: 50%;"></a>
-        <p>Ms.Snehal Chitale</p>
-        <p>Computer Engineering Department</p>
+        <p class="name_color"><b>Dr Jagdish.W.Bakal</b></p>
+        <p class="name_color"><b> Principal</b></p>
+        
       </div>
       <div class="col">
-        <a href="Ms.Snehal_Shinde_info.html"><img src="Ms.-Snehal-Shinde(new).jpg" alt="Faculty 1"
+        <a href="faculty_info/Rohini_Bhosale_info.html"><img src="assets/img/faculty/rohini mam(new).jpg" alt="Faculty 1"
             style="border-radius: 50%;"></a>
-        <p>Ms.Snehal Shinde</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Mr.Sagar_Yeshwantrao_info.html"><img src="sagar-yeshwantrao.png" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Mr.Sagar Yeshwantrao</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Shrutika_Khobragade_info.html"><img src="Ms.-Shrutika-Khobragade(new).jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Shrutika Khobragade</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Srijita_Bhattarcharjee_info.html"><img src="Srijita-Bhattacharjee.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Shrijita Bhattacharjee</p>
-        <p>Computer Engineering Department</p>
-      </div>
-      <div class="col">
-        <a href="Ms.Suchita_Walke_info.html"><img src="suchita-santosh-walke.jpg" alt="Faculty 1"
-            style="border-radius: 50%;"></a>
-        <p>Ms.Suchita Walke</p>
-        <p>Computer Engineering Department</p>
+        <p class="name_color"><b>Ms.Rohini Bhosale</b></p>
+        <p class="name_color"><b> HOD </b></p>
+        
       </div>
     </div>
   </div>
-  <footer>
-    © 2023 College Name | Address | Contact: (123) 456-7890
-  </footer>
+  
+  <br>
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="faculty_info/Dr.Rajashree_Gadhave.html"><img src="assets/img/faculty/Dr-Rajashree-Tukaram-Gadhave.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Dr.Rajashree Gadhave</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Dr. Mansi_Subhedar_info.html"><img src="assets/img/faculty/Dr.-Mansi-Subhedar.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Dr.Mansi Subhedar</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Dr.Neha_Shivhare_info.html"><img src="assets/img/faculty/Ms.-Neha-Shivhare-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Dr.Neha Shivhare</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Srijita_Bhattarcharjee_info.html"><img src="assets/img/faculty/Srijita-Bhattacharjee.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Shrijita Bhattacharjee</b></p>
+        
+      </div>
+      </div>
+      </div>
+      
+      <br>
+      <br>
+      <div class="container text-center">
+        <div class="row">
+      <div class="col">
+        <a href="faculty_info/Ms.Snehal_Shinde_info.html"><img src="assets/img/faculty/Ms.-Snehal-Shinde(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Snehal Shinde</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Akanksha_Patil_info.html"><img src="assets/img/faculty/Akanksha-Patil(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Akanksha Patil</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Dipti_Ketan_Patil_info.html"><img src="assets/img/faculty/Dipti-K-Patil (new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Dipti Ketan Patil</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Ekta_Ukey_info.html"><img src="assets/img/faculty/Ms.-Ekta-Ukey-1.jpg" alt="Faculty 1" style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Ekta Ukey</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+      <div class="container text-center">
+        <div class="row">
+      <div class="col">
+        <a href="faculty_info/abhijeet_More_info.html"><img src="assets/img/faculty/abhijeet-more(new).jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Mr.Abhijeet More</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Nikita_Saindane_info.html"><img src="assets/img/faculty/Ms.-Nikita-Saindane.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Nikita Saindane</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Snehal_Chitale_info.html"><img src="assets/img/faculty/Ms.-Snehal-Chitale.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Snehal Chitale</b></p>
+        
+      </div>
+
+      <div class="col">
+        <a href="faculty_info/Mr.Anish_Pillai_info.html"><img src="assets/img/faculty/Mr.-Anish-Pillai-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Mr.Anish Pillai</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+      <div class="container text-center">
+        <div class="row">
+      <div class="col">
+        <a href="faculty_info/Mr.Rahul_Kapse_info.html"><img src="assets/img/faculty/Mr.-Rahul-Kapse-1.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Mr.Rahul Kapse</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Mr.Sagar_Yeshwantrao_info.html"><img src="assets/img/faculty/sagar-yeshwantrao.png" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Mr.Sagar Yeshwantrao</b></p>
+        
+      </div>
+
+<div class="col">
+        <a href="faculty_info/Ms.Archana_Augustine_info.html"><img src="assets/img/faculty/Ms.-Archana-Augustine.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Archana Augustine</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Dhanashri_Sakhare_info.html"><img src="assets/img/faculty/Ms.-Dhanashri-Bhopatrao.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Dhanashri Sakhare</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+      <div class="container text-center">
+        <div class="row">
+<div class="col">
+        <a href="faculty_info/Ms.Pooja_Patil_info.html"><img src="assets/img/faculty/Ms.-Pooja-Patil.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Pooja Patil</b></p>
+        
+      </div>
+<div class="col">
+        <a href="faculty_info/Dr.Sumit_Bhattarcharjee_info.html"><img src="assets/img/faculty/Shrutika-Khobragade.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Shrutika Khobragade</b></p>
+        
+      </div>
+      <div class="col">
+        <a href="faculty_info/Ms.Suchita_Walke_info.html"><img src="assets/img/faculty/suchita-santosh-walke.jpg" alt="Faculty 1"
+            style="border-radius: 50%;"></a>
+        <p class="name_color"><b>Ms.Suchita Walke</b></p>
+        
+      </div>
+</div>
+  </div>
+  <footer id="footer">
+    <div class="container">
+      <h3>Department of Computer Engineering</h3>
+      <p class="name_color"><b>For the Students, By the Students</b></p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>CompDept</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by Pratish & Dhruv
+        Developed by Priyanshu & Sahil
+        Using Bootstrap & bootstrapmade
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main2.js"></script>
+  <script src="assets/js/faculty.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
