@@ -1,0 +1,15 @@
+
+
+.about{
+    
+    margin-top:1rem;
+    padding-block: 3rem;
+}
+
+img{
+    all: revert;
+}
+
+.img-shorty{
+    height: 100px !important;
+}
