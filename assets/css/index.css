@@ -4,6 +4,16 @@
     
     margin-top:1rem;
     padding-block: 3rem;
+
+    
+   
+}
+#main{
+    background-image: url("../img/Bg/1bg.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+   mix-blend-mode: multiply;
+   filter: contrast(1);
 }
 
 img{
