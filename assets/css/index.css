@@ -15,8 +15,8 @@
     background-image: url("../img/Bg/2bg.png");
     background-repeat: repeat-y;
     background-size: 100%;
-    opacity: 0.2;
-    /* filter: grayscale(100%); */
+    opacity: 0.25;
+    filter: contrast(1000%);
     height:100%;
     width: 100%;
     z-index: -1;

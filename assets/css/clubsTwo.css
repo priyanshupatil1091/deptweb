@@ -36,3 +36,18 @@ img{
    align-items: center;
    justify-content: center;
 }
+
+.card-title{
+   color: var(--color-news-primary);
+}
+
+.custom-card-wrapper a{
+   padding: 0.5rem 1rem;
+   background-color: var(--color-violet);
+   color: white ;
+   border-radius: 4px;
+}
+
+.custom-card-wrapper a:hover{
+   color: white !important;
+}
