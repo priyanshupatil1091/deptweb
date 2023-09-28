@@ -1,52 +1,188 @@
-:root{
-    /* All Colors */
-    --color-violet: #7209B7;
-    --color-violet-blue: #560BAD;
-    --color-purple: #480CA8;
-    --color-darker-navy-blue: #3A0CA3;
-    --color-darker-sky-blue: #3F37C9;
-    --color-darker-blue: #0c1e73;
-    --color-sky-blue: #3F37C9;
-    --color-lighter-sky-blue: #4361EE;
-    --color-cyan: #4CC9F0;
-    --color-default-bg: #282828e6;
+:root {
+  /* All Colors */
+  --color-appeal-white: #dadada;
+  --color-violet: #7209b7;
+  --color-violet-blue: #560bad;
+  --color-purple: #480ca8;
+  --color-darker-navy-blue: #3a0ca3;
+  --color-darker-sky-blue: #3f37c9;
+  --color-darker-blue: #0c1e73;
+  --color-sky-blue: #3f37c9;
+  --color-lighter-sky-blue: #4361ee;
+  --color-cyan: #4cc9f0;
+  --color-default-bg: #282828e6;
 
-    /* Navigation Colors */
-    --color-navigation-primary:#3c106e;
+  /* Navigation Colors */
+  --color-navigation-primary: #3c106e;
 
-    /* Heading Colors */
-    --color-heading-primary: #061d88;
-    --color-paragraph: #721bab;
+  /* Heading Colors */
+  --color-heading-primary: #061d88;
+  --color-paragraph: #370756;
+
+  /* News Container*/
+  --color-news-primary: #511892;
 }
 
 /* Navigation Revamp */
 
-#header.header-scrolled{
-    background-color: var(--color-navigation-primary);
+#header.header-scrolled,
+#header {
+  background-color: var(--color-navigation-primary);
 }
 
-.navbar > ul > li > a::before{
-    background-color: white;
-    height: 3px;
+.navbar > ul > li > a::before {
+  background-color: white;
+  height: 3px;
 }
 
-.section-title h2::after{
-    background-color: var(--color-navigation-primary);
-    height: 4px;
-    /* width: 3%; */
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+    color: white;
+}
+
+.section-title h2::after {
+  background-color: var(--color-navigation-primary);
+  height: 4px;
+  /* width: 3%; */
+}
+
+/* Notice Revamp */
+.news-container .title {
+  background-color: var(--color-news-primary);
+}
+
+.news-container {
+  background-color: white;
+  margin-inline: auto;
+  width: 95%;
+  margin-top: 2rem;
 }
 
 /* Headings Revamp */
 
-h1,h2{
-    color: var(--color-purple);
+h1,
+h2 {
+  color: var(--color-news-primary);
 }
 
-.section-title h2{
-    font-size: 2.1rem;
+.section-title h2 {
+  font-size: 2.1rem;
 }
 
-.section-title p{
-    color: var(--color-paragraph);
-    font-size: 1.1rem;
+.section-title p {
+  color: var(--color-paragraph);
+  font-size: 1.1rem;
+}
+
+/* Sizing Adjustments */
+
+.about {
+  /* margin-top: 3rem; */
+  padding-top: 6rem;
+}
+
+section {
+  padding-block: 3rem;
+}
+
+/* Features Box */
+
+.services .icon-box {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.services .icon-box h4 {
+  color: var(--color-news-primary);
+  font-size: 1.55rem;
+}
+
+.services .icon-box .icon {
+  background-color: var(--color-violet-blue);
+}
+
+.services .icon-box p {
+  font-size: 1rem;
+  color: var(--color-paragraph);
+}
+
+/* cta Button Shit */
+
+.cta .cta-btn {
+  background-color: var(--color-news-primary);
+}
+
+.cta .cta-btn:hover {
+  background-color: var(--color-violet);
+}
+
+/* Continuous Learning Shit */
+
+.features .icon-box h4,
+.features .icon-box i {
+  color: var(--color-news-primary);
+}
+
+.features .icon-box p {
+  color: var(--color-paragraph);
+}
+
+/* Counts Section */
+
+.counts::before {
+  background: url('/assets/img/purple-texture.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(4px);
+}
+
+.counts .title h3 {
+  color: var(--color-appeal-white);
+}
+
+.counts .counters span {
+  color: white;
+}
+
+.counts .counters p {
+  color: var(--color-appeal-white);
+}
+
+/* Infrastructure */
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background-color: var(--color-violet-blue);
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  background-color: var(--color-news-primary);
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 25px;
+}
+
+/* FAQ Section */
+
+.faq .content h3 {
+  color: var(--color-news-primary);
+}
+
+/* Contacts Section */
+.contact .info h4,
+.contact .info i {
+  color: var(--color-news-primary);
+}
+
+.contact .php-email-form button[type='submit'] {
+  background-color: var(--color-news-primary);
+}
+
+/* Footer */
+
+#footer {
+  background-color: var(--color-navigation-primary);
 }
