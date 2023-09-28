@@ -46,6 +46,7 @@ img{
    background-color: var(--color-violet);
    color: white ;
    border-radius: 4px;
+   margin-top: 0.5rem;
 }
 
 .custom-card-wrapper a:hover{
