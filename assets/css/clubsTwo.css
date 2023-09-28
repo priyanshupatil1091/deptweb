@@ -41,13 +41,19 @@ img{
    color: var(--color-news-primary);
 }
 
-.custom-card-wrapper a{
+.custom-card-wrapper .card-text a{
    padding: 0.5rem 1rem;
    background-color: var(--color-violet);
    color: white ;
    border-radius: 4px;
+   margin-top: 0.5rem !important;
+   display: inline-block;
 }
 
 .custom-card-wrapper a:hover{
    color: white !important;
+}
+
+.seminar-more-container a{
+   background-color: var(--color-news-primary);
 }
