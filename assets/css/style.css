@@ -468,11 +468,15 @@ h6 {
 
 #hero h2 {
   color: #eee;
-  margin-bottom: 40px;
+  margin-bottom: 20rem;
   font-size: 24px;
 }
 
-#hero .play-btn {
+.jcc{
+  justify-content: center;
+}
+
+/* #hero .play-btn {
   width: 94px;
   height: 94px;
   margin: 0 auto;
@@ -536,7 +540,7 @@ h6 {
   z-index: 200;
   animation: none;
   border-radius: 0;
-}
+} */
 
 @media (min-width: 1024px) {
   #hero {
@@ -553,7 +557,7 @@ h6 {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 6rem;
   }
 }
 
@@ -1416,4 +1420,12 @@ section {
 
 #footer .credits a:hover {
   color: #5b5b5b;
+}
+
+
+
+/* card group */
+.dedli{
+  height: 150px;
+  width: 150Px;
 }
